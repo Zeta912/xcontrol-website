@@ -1,0 +1,379 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Ruda:wght@400;600;700&display=swap");
+
+*{
+  padding: 0;
+  margin: 0;
+}
+
+.body {
+  overflow: hidden;
+}
+
+/* TOP BAR SECTION */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    align-items: center;
+    color: rgb(31,162,212);
+    padding: 20px 10px;
+    font-family: "Roboto", sans-serif;
+    height:100%;
+}
+
+.business-name{
+  font-weight: bold;
+  font-size: 24px;
+  padding-left: 50px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  height: 100%;
+}
+
+.nav-links li {
+    margin-right: 0px;
+    height: 100%;
+}
+
+.nav-links li:last-child{
+  margin-right:20px;
+}
+
+.nav-links li a {
+  color:rgb(31,162,212);
+  text-decoration: none;
+  padding: 24px 16px;
+  text-align: center;
+  font-size: 18px;
+}
+
+.nav-links li a:hover {
+  background-color: #fff;
+  transition: color 0.3s ease;
+}
+
+#home:target, #nosotros:target, #servicios:target, #contacto:target {
+  font-weight: bold;
+}
+
+/* HERO SECTION */
+
+.background-image{
+  background-image: linear-gradient(rgba(31,162,212,0.5), rgba(31,162,212,0.5)), url('./images/emmanuel-ikwuegbu--0-kl1BjvFc-unsplash.jpg') ;
+  background-size: cover;
+  background-position: center;
+  position:absolute;
+  top:0;
+  left:0;
+  width: 100%;
+  height: 100%;
+  transform:rotateX(180deg);
+  transform:rotateY(180deg);
+  z-index:-1;
+
+}
+
+.hero {
+  position: relative;
+  display: flex;
+  color: #fff;
+  height: 80vh; /* Set the height of the hero section */
+  text-align: left;
+  padding: 50px;
+  font-family: "Roboto", sans-serif;
+  overflow: hidden;
+}
+
+.hero-content {
+  display: inline-block;
+  padding: 20px;
+  margin-left: 200px;
+  text-align: left;
+  padding-top: 175px;
+  z-index: 1;
+}
+
+
+.hero h1 {
+  font-size: 3rem;
+  margin-top: 70px;
+  padding-bottom: 15px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  padding-bottom: 30px;
+  line-height: 1.7;
+  color: #fff
+}
+
+.btn {
+  padding: 15px 30px;
+  text-decoration: none;
+  color: rgb(31,162,212);
+  background-color: #fff;
+  border-radius: 3px;
+  border-width: 8px;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+.btn:hover {
+  background-color: #fff;
+}
+
+/* NOSOTROS SECTION */
+
+.nosotros-sec{
+  text-align: center;
+  padding-top: 50px;
+}
+
+.nosotros-heading{
+  color:#288ad2;
+}
+
+.nosotros-p{
+  max-width: 850px;
+  margin: 0 auto;
+  padding-top: 20px;
+  font-family: "roboto",sans-serif;
+  color: #748493;
+}
+
+.nosotros-img{
+  max-width: 550px;
+}
+
+
+/* SERVICIOS SECTION */
+
+.services-sec {
+  width: 100%;
+  padding: 3em 3em;
+  display: grid;
+  place-items: center;
+  align-content: center;
+  box-sizing: border-box;
+  font-family: "roboto",sans-serif;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.column {
+  padding: 3.5em 5em 1em 1em;
+  text-align: center;
+  justify-content: center;
+  flex: 0 0 33.33%;
+  max-width: 33.33%;
+}
+.card {
+  width: 100%;
+  height: 100%;
+  padding: 1em 0.5em;
+  background: linear-gradient(#ffffff 50%, rgb(31,162,212) 50%);
+  background-size: 100% 200%;
+  background-position: 0 2.5%;
+  border-radius: 5px;
+  box-shadow: 0 0 35px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+  transition: 0.5s;
+  border-radius: 10px;
+}
+
+h2{
+  font-family: open-sans,sans-serif;
+  font-size: 36px;
+  color: #288ad2;
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1f194c;
+  margin: 1em 0;
+}
+p {
+  color: #000;
+  font-size: 15px;
+  line-height: 1.6;
+  letter-spacing: 0.03em;
+}
+.icon-wrapper {
+  background-color: rgb(31,162,212);
+  position: relative;
+  margin: auto;
+  font-size: 30px;
+  height: 2em;
+  width: 2em;
+  color: #ffffff;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  transition: 0.5s;
+}
+.card:hover {
+  background-position: 0 100%;
+}
+.card:hover .icon-wrapper {
+  background-color: #ffffff;
+  color: rgb(31,162,212);
+}
+.card:hover h3 {
+  color: #ffffff;
+}
+.card:hover p {
+  color: #f0f0f0;
+}
+
+/* Contact Section */
+
+.form-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 70vh;
+}
+
+.wrapper{
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  width: 100%;
+  height: 100%;
+}
+
+.wrapper h2{
+  padding: 2rem 1rem;
+  justify-content: center;
+  display: flex;
+  padding-bottom: 50px;
+}
+
+.form-sec{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 1erm;
+}
+
+.form-sec ul{
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.detalles-form .iconos{
+  background: rgb(31,162,212);
+  width:50px;
+  height: 50px;
+  margin-right: 1rem;
+  border-radius: 50%;
+}
+
+.detalles-form li{
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  color: #000;
+  margin: 0.8rem 0;
+}
+
+.detalles-form li i{
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: inherit;
+  color:#fff;
+}
+
+.form-group {
+  position: relative;
+}
+
+.form-group .form-control{
+  width: 100%;
+  outline: none;
+  border: 1px solid #ddd;
+  padding: 0.8rem;
+  margin: 1rem 0;
+  resize: none;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.form-group span{
+  position: absolute;
+  top: 0.8rem;
+  left: 0;
+  padding: 1rem;
+  pointer-events: none;
+  font-size: 0.8rem;
+  color: #ddd;
+  text-transform: uppercase;
+  transition: 0.3s;
+}
+
+.form-group .form-control:valid ~ span,
+.form-group .form-control:focus ~ span {
+  background: rgb(31,162,212);
+  color: #fff;
+  transform: translateX(10px) translateY(-10px);
+  padding: 0 10px;
+}
+
+.input-field button{
+  outline: none;
+  border: none;
+  background:rgb(31,162,212);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  margin: 1rem 0;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.input-field button:active{
+  transform: scale(1.2);
+}
+
+@media screen and (max-width: 768px) {
+
+  .nosotros-p{
+    max-width: 575px;
+  }
+
+  /* SERVICES SECTION */
+
+  section {
+    padding: 0 2em;
+  }
+  .column {
+    flex: 0 50%;
+    max-width: 50%;
+  }
+  /* CONTACT SECTION */
+  
+  .form-sec{
+    grid-template-columns: 1fr;
+  }
+
+  .wrapper h2{
+    font-size: 2rem;
+  }
+
+  .detalles-form li{
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+  }
+}
