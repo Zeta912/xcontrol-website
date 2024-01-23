@@ -17,9 +17,36 @@ header {
     background-color: #fff;
     align-items: center;
     color: rgb(31,162,212);
-    padding: 20px 10px;
     font-family: "Roboto", sans-serif;
-    height:100%;
+}
+
+.sidebar{
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 250px;
+  z-index: 999;
+  background-color: white;
+  box-shadow: -10px 0 10px rgba(0,0,0,0.1);
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  list-style: none;
+  font-size: 18px;
+  transition: all 0.3s ease-in-out
+}
+
+.sidebar li{
+  width: 100%;
+}
+
+nav li a {
+  color:rgb(31,162,212);
+  text-decoration: none;
+  text-align: center;
+  font-size: 18px;
 }
 
 .business-name{
@@ -33,13 +60,6 @@ header {
   display: none;
 }
 
-.bar{
-  width: 25px;
-  height: 3px;
-  background-color: white;
-  margin: 6px 0;
-}
-
 .nav-links {
   list-style: none;
   display: flex;
@@ -47,31 +67,66 @@ header {
   height: 100%;
 }
 
-.nav-links li {
-    margin-right: 0px;
-    height: 100%;
+nav li{
+  height: 50px;
 }
 
 .nav-links li:last-child{
   margin-right:20px;
 }
 
-.nav-links li a {
-  color:rgb(31,162,212);
-  text-decoration: none;
-  padding: 24px 16px;
-  text-align: center;
-  font-size: 18px;
+nav a{
+  height: 100%;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
 }
 
-.nav-links li a:hover {
-  background-color: #fff;
+nav ul li a:hover {
+  background-color: #ddd;
   transition: color 0.3s ease;
 }
 
 #home:target, #nosotros:target, #servicios:target, #contacto:target {
   font-weight: bold;
 }
+
+.hamburger .line{
+  width: 30px;
+  height: 5px;
+  background-color:#343541;
+  display: block;
+  margin: 8px auto;
+  border-radius: 5px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.hamburger:hover{
+  cursor: pointer;
+}
+
+/* ONE */
+
+#hamburger-1.is-active .line:nth-child(2){
+  opacity: 0;
+}
+
+#hamburger-1.is-active .line:nth-child(1){
+  -webkit-transform: translateY(13px) rotate(45deg);
+  -ms-transform: translateY(13px) rotate(45deg);
+  -o-transform: translateY(13px) rotate(45deg);
+  transform: translateY(13px) rotate(45deg);
+}
+
+#hamburger-1.is-active .line:nth-child(3){
+  -webkit-transform: translateY(-13px) rotate(-45deg);
+  -ms-transform: translateY(-13px) rotate(-45deg);
+  -o-transform: translateY(-13px) rotate(-45deg);
+  transform: translateY(-13px) rotate(-45deg);
+}
+
 
 /* HERO SECTION */
 
@@ -432,6 +487,6 @@ p {
 
   .nosotros-p{
     max-width: 400px;
-    font-size: 9rem;
+    font-size: 0.9rem;
   }
 }

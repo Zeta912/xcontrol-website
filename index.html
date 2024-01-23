@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA Compatible" content="ie=edge">
         <title>X Control</title>
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"/>
@@ -14,16 +15,27 @@
           <header>
             <div class="business-name">X Control</div>
             <nav>
-                <div class="menu-toggle" onclick="toggleMenu()">
-                  <div class="bar"></div>
-                  <div class="bar"></div>
-                  <div class="bar"></div>
-                </div>
+                <ul class="sidebar">
+                  <li onclick=hideSidebar()><div class="hamburger" id="hamburger-1">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                  </div></li>
+                  <li><a id="home" href="#home">Home</a></li>
+                  <li><a id="nosotros" href="#nosotros">Nosotros</a></li>
+                  <li><a id="servicios" href="#servicios">Servicios</a></li>
+                  <li><a id="contacto" href="#contacto">Contacto</a></li>
+                </ul>
                 <ul class="nav-links">
                     <li><a id="home" href="#home">Home</a></li>
                     <li><a id="nosotros" href="#nosotros">Nosotros</a></li>
                     <li><a id="servicios" href="#servicios">Servicios</a></li>
                     <li><a id="contacto" href="#contacto">Contacto</a></li>
+                    <li onclick=showSidebar()><div class="hamburger" id="hamburger-1">
+                      <span class="line"></span>
+                      <span class="line"></span>
+                      <span class="line"></span>
+                    </div></li>
                 </ul>
             </nav>
         </header>
@@ -203,6 +215,22 @@
               </div>
             </section>
         </main>
-        <script src="script.js"></script>
+        <script>
+          function showSidebar(){
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'flex'
+          }
+
+          function hideSidebar(){
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'none'
+          }
+
+          $(document).ready(function(){
+            $(".hamburger").click(function(){
+              $(this).toggleClass("is-active");
+             });
+           });
+        </script>
     </body>
 </html>
