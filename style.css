@@ -28,6 +28,18 @@ header {
   padding-left: 50px;
 }
 
+.menu-toggle{
+  cursor: pointer;
+  display: none;
+}
+
+.bar{
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 6px 0;
+}
+
 .nav-links {
   list-style: none;
   display: flex;
@@ -349,6 +361,30 @@ p {
 
 @media screen and (max-width: 768px) {
 
+  .menu-toggle{
+    display: block;
+  }
+
+  .nav-links{
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background-color: #ddd;
+  }
+
+  .nav-links.show{
+    display: flex;
+  }
+
+  /* HERO SECTION */
+
+  .hero-content{
+    align-content:center;
+  }
+
   .hero h1{
     text-align: center;
     justify-content: center;
@@ -356,8 +392,15 @@ p {
     margin:auto;
   }
   
+  /* NOSOTROS SECTION */
+
   .nosotros-p{
     max-width: 575px;
+    font-size: 0.8rem;
+  }
+
+  .nosotros-img{
+    max-width: 80%;
   }
 
   /* SERVICES SECTION */
@@ -382,5 +425,13 @@ p {
   .detalles-form li{
     margin: 0.5rem 0;
     padding: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+
+  .nosotros-p{
+    max-width: 400px;
+    font-size: 9rem;
   }
 }
