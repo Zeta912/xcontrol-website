@@ -12,9 +12,11 @@
 /* TOP BAR SECTION */
 
 header {
+    position: relative;
+    padding: 0 2rem;
+    background-color: #fff;
     display: flex;
     justify-content: space-between;
-    background-color: #fff;
     align-items: center;
     color: rgb(31,162,212);
     font-family: "Roboto", sans-serif;
@@ -40,6 +42,15 @@ header {
 
 .sidebar li{
   width: 100%;
+  padding: 0.7rem;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+ 
+nav{
+  height: 50px;
+  max-width: 1200px;
 }
 
 nav li a {
@@ -55,27 +66,30 @@ nav li a {
   padding-left: 50px;
 }
 
-.menu-toggle{
-  cursor: pointer;
-  display: none;
-}
-
-.nav-links {
+ .nav-links {
   list-style: none;
   display: flex;
   justify-content: flex-end;
-  height: 100%;
+  align-items: center;
+  gap: 2rem;
+}
+
+.toggle_btn{
+  font-size: 1.5rem;
+  cursor: pointer;
+  align-content: center;
+  display: flex;
 }
 
 nav li{
   height: 50px;
 }
 
-.nav-links li:last-child{
-  margin-right:20px;
+nav .toggle_btn{
+  display: none;
 }
 
-nav a{
+nav a {
   height: 100%;
   padding: 0 20px;
   display: flex;
@@ -90,43 +104,6 @@ nav ul li a:hover {
 #home:target, #nosotros:target, #servicios:target, #contacto:target {
   font-weight: bold;
 }
-
-.hamburger .line{
-  width: 30px;
-  height: 5px;
-  background-color:#343541;
-  display: block;
-  margin: 8px auto;
-  border-radius: 5px;
-  -webkit-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-}
-
-.hamburger:hover{
-  cursor: pointer;
-}
-
-/* ONE */
-
-#hamburger-1.is-active .line:nth-child(2){
-  opacity: 0;
-}
-
-#hamburger-1.is-active .line:nth-child(1){
-  -webkit-transform: translateY(13px) rotate(45deg);
-  -ms-transform: translateY(13px) rotate(45deg);
-  -o-transform: translateY(13px) rotate(45deg);
-  transform: translateY(13px) rotate(45deg);
-}
-
-#hamburger-1.is-active .line:nth-child(3){
-  -webkit-transform: translateY(-13px) rotate(-45deg);
-  -ms-transform: translateY(-13px) rotate(-45deg);
-  -o-transform: translateY(-13px) rotate(-45deg);
-  transform: translateY(-13px) rotate(-45deg);
-}
-
 
 /* HERO SECTION */
 
@@ -414,9 +391,30 @@ p {
   transform: scale(1.2);
 }
 
+
+@media (max-width: 992px) {
+  nav .nav-links{
+    display: none;
+  }
+
+  nav .toggle_btn{
+    display: block;
+    margin-right: 20px;
+    padding: 0 20px;
+    padding-top:12px;
+    display: flex;
+    align-items: center;
+    }
+
+  .sidebar{
+    display: block;
+  }
+}
+
+
 @media screen and (max-width: 768px) {
 
-  .menu-toggle{
+  nav .toggle_btn{
     display: block;
   }
 
