@@ -22,38 +22,18 @@ header {
     font-family: "Roboto", sans-serif;
 }
 
-.sidebar{
-  position: fixed;
-  top: 0;
-  right: 0;
-  height: 100vh;
-  width: 250px;
-  z-index: 999;
-  background-color: white;
-  box-shadow: -10px 0 10px rgba(0,0,0,0.1);
-  display: none;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  list-style: none;
-  font-size: 18px;
-  transition: all 0.3s ease-in-out
+.dropdown_menu{
+  position: absolute;
+  right: 2rem;
+  top: 60px;
 }
 
-.sidebar li{
-  width: 100%;
-  padding: 0.7rem;
-  display: none;
-  align-items: center;
-  justify-content: center;
-}
- 
-nav{
+.nav{
   height: 50px;
   max-width: 1200px;
 }
 
-nav li a {
+.nav li a {
   color:rgb(31,162,212);
   text-decoration: none;
   text-align: center;
@@ -81,11 +61,11 @@ nav li a {
   display: flex;
 }
 
-nav li{
+.nav li{
   height: 50px;
 }
 
-nav .toggle_btn{
+.nav .toggle_btn{
   display: none;
 }
 
@@ -96,7 +76,7 @@ nav a {
   align-items: center;
 }
 
-nav ul li a:hover {
+.nav ul li a:hover {
   background-color: #ddd;
   transition: color 0.3s ease;
 }
