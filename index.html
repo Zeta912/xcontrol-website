@@ -16,10 +16,10 @@
             <div class="business-name">X Control</div>
             <div class="nav">
               <ul class="nav-links">
-                <li><a id="home" href="#home">Home</a></li>
+                <li><a id="home" href="#hero">Home</a></li>
                 <li><a id="nosotros" href="#nosotros">Nosotros</a></li>
-                <li><a id="servicios" href="#servicios">Servicios</a></li>
-                <li><a id="contacto" href="#contacto">Contacto</a></li>
+                <li><a id="servicios" href="#services-sec">Servicios</a></li>
+                <li><a id="contacto" href="#contact-sec">Contacto</a></li>
               </ul>
                 <div class="toggle_btn">
                   <i class="fa-solid fa-bars"></i>
@@ -143,7 +143,8 @@
                     </div>
             </section>
             <!--Contact Section-->
-            <section id="contact-sec" class="contact-sec">
+            <span id="contact-sec"></span>
+            <section class="contact-sec">
               <div class="form-container">
                 <div class="wrapper">
                   <h2>Contacto</h2>
@@ -209,22 +210,6 @@
               </div>
             </section>
         </main>
-        <script>
-          function showSidebar(){
-            const sidebar = document.querySelector('.sidebar')
-            sidebar.style.display = 'flex'
-          }
-
-          function hideSidebar(){
-            const sidebar = document.querySelector('.sidebar')
-            sidebar.style.display = 'none'
-          }
-
-          $(document).ready(function(){
-            $(".hamburger").click(function(){
-              $(this).toggleClass("is-active");
-             });
-           });
-        </script>
+        <script src="./script.js"></script>
     </body>
 </html>
